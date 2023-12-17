@@ -3,22 +3,41 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 
 Console.WriteLine("Register:");
-Console.WriteLine("What do you want to set as Username?");
-string userName = Console.ReadLine();
-
-Console.WriteLine("What do you want to set as Password?");
-string passWord = Console.ReadLine();
-Console.Clear();
-
-Console.WriteLine("Username:");
-string usernameEingabe = Console.ReadLine();
-Console.WriteLine("Password:");
-string passwordInput = Console.ReadLine();
-Console.Clear();
-
-if (usernameEingabe == userName)
+string userName = null;
+while (userName == null)
 {
-    if (passwordInput == passWord)
+    Console.WriteLine("What do you want to set as Username?");
+    userName = Console.ReadLine();
+}
+
+
+
+string password = null;
+while (password == null) ;
+{
+    Console.WriteLine("Password:");
+    password = Console.ReadLine();
+}
+Console.Clear();
+
+string usernameInput = null;
+while (usernameInput == null)
+{
+    Console.WriteLine("Username:");
+    usernameInput = Console.ReadLine();
+}
+
+string passwordInput = null;
+while (passwordInput == null);
+{
+    Console.WriteLine("Password:");
+    passwordInput = Console.ReadLine();
+}
+Console.Clear();
+
+if (usernameInput == userName)
+{
+    if (passwordInput == password)
     {
 
         Console.BackgroundColor = ConsoleColor.Magenta;
