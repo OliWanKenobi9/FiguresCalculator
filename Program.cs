@@ -74,10 +74,10 @@ if (usernameEingabe == userName)
                 }
                 if (trianglechosenTopic == "2" || trianglechosenTopic == "Hypotenuse")
                 {
-                    Console.WriteLine("Wie lang ist Kathete 1?");
+                    Console.WriteLine("How long is Catheter 1?");
                     double triangleinputCatheter = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Wie lang ist Kathete 2?");
+                    Console.WriteLine("How long is Catheter 2)");
                     double triangleCatheter = double.Parse(Console.ReadLine());
 
                     double triangleHypotenuse = Math.Sqrt(Math.Pow(triangleinputCatheter, 2) + Math.Pow(triangleCatheter, 2));
