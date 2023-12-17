@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 
 Console.WriteLine("Register:");
@@ -52,12 +53,13 @@ if (usernameEingabe == userName)
                 double squareScope = squareSideA * 4;
                 Console.WriteLine("The Scope is: " + squareScope);
             }
+        }
             if (chosenTopic == "2" || chosenTopic == "Triangle")
             {
                 Console.WriteLine("What do you want to calculate? Catheter (1) | Hypotenuse (2)");
                 string trianglechosenTopic = Console.ReadLine();
 
-                if (squarechosenTopic == "1" || squarechosenTopic == "Catheter")
+                if (trianglechosenTopic == "1" || trianglechosenTopic == "Catheter")
                 {
                     Console.WriteLine("Was ist die Seitenlänge der Hypotenuse?");
                     double triangleHypotenuse = double.Parse(Console.ReadLine());
@@ -70,7 +72,7 @@ if (usernameEingabe == userName)
                     Console.WriteLine("The sidelength of Catheter 2 is: " + triangleCatheter);
 
                 }
-                if (squarechosenTopic == "2" || squarechosenTopic == "Hypotenuse")
+                if (trianglechosenTopic == "2" || trianglechosenTopic == "Hypotenuse")
                 {
                     Console.WriteLine("Wie lang ist Kathete 1?");
                     double triangleinputCatheter = double.Parse(Console.ReadLine());
@@ -101,10 +103,31 @@ if (usernameEingabe == userName)
             }
             if (chosenTopic == "4" || chosenTopic == "Kreis")
             {
+                Console.WriteLine("What do you want to calculate? Scope (1) | Radius (2) ");
+                string circlechosenTopic = Console.ReadLine();
 
+                if (circlechosenTopic == "Scope" || circlechosenTopic == "1")
+                {
+                    Console.WriteLine("Whats the radius?");
+                    double circleRadius = double.Parse(Console.ReadLine());
+
+                    double circleScope = 2 * Math.PI * circleRadius;
+                    Console.WriteLine("The Scope is: " + circleScope);
+                }
+                if (circlechosenTopic == "Radius" || circlechosenTopic == "2")
+                {
+                    Console.WriteLine("Whats the scope?");
+                    double circleScope = double.Parse(Console.ReadLine());
+
+                    double circleRadius = circleScope / (2 * Math.PI);
+                }
+                
+                
+
+
+
+            
             }
-        }
-
     }
     else
     {
