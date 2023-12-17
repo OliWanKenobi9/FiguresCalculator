@@ -1,133 +1,116 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-Console.WriteLine("Registrierung:");
-Console.WriteLine("Was willst du als Username festlegen?");
+Console.WriteLine("Register:");
+Console.WriteLine("What do you want to set as Username?");
 string userName = Console.ReadLine();
 
-Console.WriteLine("Was willst du als Passwort festlegen?");
-string passWort = Console.ReadLine();
+Console.WriteLine("What do you want to set as Password?");
+string passWord = Console.ReadLine();
 Console.Clear();
 
-Console.WriteLine("Gib deinen Username ein:");
+Console.WriteLine("Username:");
 string usernameEingabe = Console.ReadLine();
-Console.WriteLine("Gib dein Passwort ein:");
-string passwortEingabe = Console.ReadLine();
+Console.WriteLine("Password:");
+string passwordInput = Console.ReadLine();
 Console.Clear();
 
 if (usernameEingabe == userName)
 {
-    if (passwortEingabe == passWort) //Abgleich um zu sehen ob die Daten mit der Registrierung übereinstimmen
+    if (passwordInput == passWord)
     {
 
         Console.BackgroundColor = ConsoleColor.Magenta;
-        Console.WriteLine("Wilkommen! Du kannst hier kannst du dinge Rechnen!");
-        Console.WriteLine("Was willst du berechnen Lassen? Quadrat (1) | Dreieck (2) | Rechteck (3) | Kreis (4) ");
-        string themenWahl = Console.ReadLine();
-        if (themenWahl == "Quadrat")
+        Console.WriteLine("Welcome!");
+        Console.WriteLine("What do you want to calculate? Square (1) | Triangle (2) | Rectangle (3) | Circle (4) ");
+        string chosenTopic = Console.ReadLine();
+        if (chosenTopic == "Square" || chosenTopic == "1")
         {
-            Console.WriteLine("Was willst du Berechnen? Diagonale (1) | Fläche (2) | Umfang (3)");
-            string quadratThemenwahl = Console.ReadLine();
-            if (quadratThemenwahl == "1" || quadratThemenwahl == "Diagonale")
+            Console.WriteLine("What do you want to calculate? Diagonal (1) | Area (2) | Scope (3)");
+            string squarechosenTopic = Console.ReadLine();
+            if (squarechosenTopic == "1" || squarechosenTopic == "Diagonale")
             {
-                Console.WriteLine("Was ist die Seitenlänge von A?");
-                double quadratSeiteA = double.Parse(Console.ReadLine());
+                Console.WriteLine("Whats the length of side A?");
+                double squareSideA = double.Parse(Console.ReadLine());
 
-                double quadratDiagonale = Math.Sqrt(Math.Pow(quadratSeiteA, 2) + Math.Pow(quadratSeiteA, 2));
-                Console.WriteLine("Die Diagonale D beträgt: " + quadratDiagonale);
+                double squareDiagonal = Math.Sqrt(Math.Pow(squareSideA, 2) + Math.Pow(squareSideA, 2));
+                Console.WriteLine("Diagonal D is: " + squareDiagonal);
             }
-            if (quadratThemenwahl == "2" || quadratThemenwahl == "Fläche")
+            if (squarechosenTopic == "2" || squarechosenTopic == "Area")
             {
-                Console.WriteLine("Was ist die Seitenlänge von A?");
-                double quadratSeiteA = double.Parse(Console.ReadLine());
+                Console.WriteLine("Whats the length of side A?");
+                double squareSideA = double.Parse(Console.ReadLine());
 
-                double quadratFläche = quadratSeiteA * quadratSeiteA;
-                Console.WriteLine("Die Fläche beträgt:" + quadratFläche);
+                double squareArea = squareSideA * squareSideA;
+                Console.WriteLine("The Area is:" + squareArea);
             }
-            if (quadratThemenwahl == "3" || quadratThemenwahl == "Umfang") ;
+            if (squarechosenTopic == "3" || squarechosenTopic == "Scope") ;
             {
-                Console.WriteLine("Was ist die Seitenlänge von A?");
-                double quadratSeiteA = double.Parse(Console.ReadLine());
+                Console.WriteLine("Whats the length of Side A?");
+                double squareSideA = double.Parse(Console.ReadLine());
 
-                double quadratUmfang = quadratSeiteA * 4;
-                Console.WriteLine("Der Umfang beträgt: " + quadratUmfang);
+                double squareScope = squareSideA * 4;
+                Console.WriteLine("The Scope is: " + squareScope);
             }
-            if (themenWahl == "2" || themenWahl == "Dreieck")
+            if (chosenTopic == "2" || chosenTopic == "Triangle")
             {
-                Console.WriteLine("Was willst du Berechnen? Kathete (1) | Hypnoteuse (2)");
-                string dreieckThemewahl = Console.ReadLine();
+                Console.WriteLine("What do you want to calculate? Catheter (1) | Hypotenuse (2)");
+                string trianglechosenTopic = Console.ReadLine();
 
-                if (dreieckThemewahl == "1" || dreieckThemewahl == "Kathete")
+                if (squarechosenTopic == "1" || squarechosenTopic == "Catheter")
                 {
-                    Console.WriteLine("Was ist die Seitenlänge der Hypnoteuse?");
-                    double dreieckHypnoteuse = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Was ist die Seitenlänge der Hypotenuse?");
+                    double triangleHypotenuse = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Was ist die Seitenlänge der Kathete 1?");
-                    double dreieckEingabeKathete = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Whats the side length pf Catheter 1?");
+                    double triangleinputCatheter = double.Parse(Console.ReadLine());
 
-                    double dreieckKathete = Math.Sqrt(Math.Pow(dreieckHypnoteuse,2) - Math.Pow(dreieckEingabeKathete,2));
+                    double triangleCatheter = Math.Sqrt(Math.Pow(triangleHypotenuse,2) - Math.Pow(triangleinputCatheter,2));
 
-                    Console.WriteLine("Die Seitenlänge der Kathete 2 beträgt: " + dreieckKathete);
+                    Console.WriteLine("The sidelength of Catheter 2 is: " + triangleCatheter);
 
                 }
-                if (dreieckThemewahl == "2" || dreieckThemewahl == "Hypnoteuse")
+                if (squarechosenTopic == "2" || squarechosenTopic == "Hypotenuse")
                 {
                     Console.WriteLine("Wie lang ist Kathete 1?");
-                    double dreieckEingabeKathete = double.Parse(Console.ReadLine());
+                    double triangleinputCatheter = double.Parse(Console.ReadLine());
 
                     Console.WriteLine("Wie lang ist Kathete 2?");
-                    double dreieckKathete = double.Parse(Console.ReadLine());
+                    double triangleCatheter = double.Parse(Console.ReadLine());
 
-                    double dreieckHypnoteuse = Math.Sqrt(Math.Pow(dreieckEingabeKathete, 2) + Math.Pow(dreieckKathete, 2));
-                    Console.WriteLine("Die Seitenlänge der Hypnoteuse beträgt: " + dreieckHypnoteuse);
+                    double triangleHypotenuse = Math.Sqrt(Math.Pow(triangleinputCatheter, 2) + Math.Pow(triangleCatheter, 2));
+                    Console.WriteLine("Die Seitenlänge der Hypnoteuse beträgt: " + triangleHypotenuse);
                 }
             }
-            if (themenWahl == "3" || themenWahl == "Rechteck")
+            if (chosenTopic == "3" || chosenTopic == "Rechteck")
             {
                 Console.WriteLine("Was willst du berechnen? Fläche (1) | Umfang (2) | Diagonale (3)");
-                string rechteckThemenwahl = Console.ReadLine();
+                string rectanglechosenTopic = Console.ReadLine();
 
-                if (rechteckThemenwahl == "Fläche" || rechteckThemenwahl == "1")
+                if (rectanglechosenTopic == "Fläche" || rectanglechosenTopic == "1")
                 {
                     Console.WriteLine("Was ist die Seitenlänge von A?");
-                    double rechteckSeiteA = double.Parse(Console.ReadLine());
+                    double rectangleSideA = double.Parse(Console.ReadLine());
 
                     Console.WriteLine("Was ist die Seitenlänge von B?");
-                    double rechteckSeiteB = double.Parse(Console.ReadLine());
+                    double rectangleSideB = double.Parse(Console.ReadLine());
 
-                    double rechteckFläche = rechteckSeiteA * rechteckSeiteB;
-                    Console.WriteLine("Die Fläche beträgt: " + rechteckFläche);
+                    double rectangleArea = rectangleSideA * rectangleSideB;
+                    Console.WriteLine("Die Fläche beträgt: " + rectangleArea);
                 }
             }
-            if (themenWahl == "4" || themenWahl == "Kreis")
+            if (chosenTopic == "4" || chosenTopic == "Kreis")
             {
 
             }
         }
 
-        Console.BackgroundColor = ConsoleColor.Black;
-        Console.WriteLine("Was ist die Seitenlänge von A?");
-        double seiteA = Convert.ToDouble(Console.ReadLine());
-        Console.Clear();
-
-        Console.WriteLine("Was ist die Seitenlänge von B?");
-        double seiteB = Convert.ToDouble(Console.ReadLine());
-        Console.Clear();
-
-        double seiteC = Math.Sqrt(Math.Pow(seiteA, 2) + Math.Pow(seiteB, 2));
-        Console.WriteLine("Die Seitenlänge C beträgt: " + seiteC);
-
-        double Fläche = 0.5 * seiteA * seiteB;
-        Console.WriteLine("Die Fläche beträgt: " + Fläche);
-
-        double Umfang = seiteA + seiteB + seiteC;
-        Console.WriteLine("Der Umfang beträgt: " + Umfang);
     }
     else
     {
-        Console.WriteLine("Falsches Passwort. Das Programm wird beendet.");
+        Console.WriteLine("Wrong Password. The Program will be stopped.");
     } }
 else
 {
-    Console.WriteLine("Falscher Username. Das Programm wird beendet.");
+    Console.WriteLine("Wrong Username. The Program will be stopped.");
 }
