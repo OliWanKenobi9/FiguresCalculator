@@ -10,8 +10,6 @@ while (userName == null)
     userName = Console.ReadLine();
 }
 
-
-
 string password = null;
 while (password == null) ;
 {
@@ -140,12 +138,6 @@ if (usernameInput == userName)
 
                     double circleRadius = circleScope / (2 * Math.PI);
                 }
-                
-                
-
-
-
-            
             }
     }
     else
