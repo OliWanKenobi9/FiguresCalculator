@@ -11,11 +11,11 @@ switch(inputChoice)
         break;
     case "2":
     case "Rectangle":
-        Console.WriteLine("du hast 2 gedrückt");
+        Rectangle();
         break;
     case "3":
     case "Circle":
-        Console.WriteLine("du hast 3 gedrückt");
+        Circle();
         break;
     case "4":
     case "Triangle":
@@ -109,8 +109,50 @@ void Rectangle()
 
             if (rectangleSideB == null)
             {
-                Console.WriteLine("Invalid")
+                Console.WriteLine("Invalid");
+            }
+            break;
+        case "2":
+        case "scope":
+            Console.WriteLine("Whats the length of Side A?");
+            rectangleSideA = double.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Whats the length of Side B?");
+            rectangleSideB = double.Parse(Console.ReadLine());
+
+            double rectangleScope = rectangleSideA + rectangleSideB * 2;
+            Console.WriteLine("The scope is: " + rectangleScope);
+
+            if (rectangleSideA == null)
+            {
+                Console.WriteLine("Invalid");
+            }
+
+            if (rectangleSideB == null)
+            {
+                Console.WriteLine("Invalid");
+            }
+            break;
+        case "3":
+        case "diagonal":
+            Console.WriteLine("Whats the length of Side A?");
+            rectangleSideA = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Whats the length of Side B?");
+            rectangleSideB = double.Parse(Console.ReadLine());
+
+            double rectangleDiagonal = Math.Sqrt(Math.Pow(rectangleSideA, 2) + Math.Pow(rectangleSideB, 2));
+            Console.WriteLine("The diagonal is: " + rectangleDiagonal);
+            if (rectangleSideA == null)
+            {
+                Console.WriteLine("Invalid");
+            }
+
+            if (rectangleSideB == null)
+            {
+                Console.WriteLine("Invalid");
             }
             break;
     }
 }
+
