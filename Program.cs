@@ -6,19 +6,19 @@ string inputChoice = Console.ReadLine().ToLower();
 switch(inputChoice)
 {
     case "1":
-    case "Square":
+    case "square":
         Square();
         break;
     case "2":
-    case "Rectangle":
+    case "rectangle":
         Rectangle();
         break;
     case "3":
-    case "Circle":
+    case "circle":
         Circle();
         break;
     case "4":
-    case "Triangle":
+    case "triangle":
         Triangle();
         break;
     default:

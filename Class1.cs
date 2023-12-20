@@ -3,9 +3,10 @@
 /// <summary>
 /// Summary description for Class1
 /// </summary>
-public class Class1
+public class Square
 {
-	public Class1()
+	public double squareSideA = ;
+	public Square()
 	{
 		//
 		// TODO: Add constructor logic here
